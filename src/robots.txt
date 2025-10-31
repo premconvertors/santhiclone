@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://santhimultispecialityhospital.com/sitemap.xml
+Sitemap: https://santhiclone.pages.dev/sitemap.xml
