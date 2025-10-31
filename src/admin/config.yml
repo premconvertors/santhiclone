@@ -1,18 +1,18 @@
 backend:
   name: "github"
-  repo: santhimultispecialityhospital/santhiclone
+  repo: premconvertors/santhiclone
   branch: main
   site_domain: https://santhiclone.pages.dev
   base_url: https://santhiclone.pages.dev
   auth_endpoint: /api/auth
-media_folder: "src/images/blog"
-public_folder: "/images/blog"
+media_folder: "src/images"
+public_folder: "/images"
 editor:
   preview: false
 collections:
   - name: "blog"
     label: "Blog"
-    folder: "src/blog"
+    folder: "src/blogs"
     create: true
     slug: "{{slug}}"
     fields:
