@@ -1,0 +1,600 @@
+---
+# 11ty Front Matter for Pagination (Must be at the very top of the file)
+pagination:
+    data: collections.blogs 
+    size: 4 # Shows 3 posts per page
+    alias: posts # The loop variable for posts on this page
+permalink: /blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html # Sets the URL structure (e.g., /blog/ and /blog/page/2/)
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Santhi Multi Speciality Hospital | Anantapur | Andhra Pradesh</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="Santhi Multi Speciality Hospital in Anantapur, Andhra Pradesh.  Providing expert medical care.">
+     <meta name="keywords" content="hospital, anantapur, multi speciality, nursing home, andhra pradesh, health care">
+     <meta name="author" content="Santhi Multispeciality Hospital">
+     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="geo.placename" content="Anantapur, Andhra Pradesh, India">
+     <meta name="geo.region" content="IN-AP">
+     <meta name="geo.position" content="14.6819;77.6006">
+     <meta name="ICBM" content="14.6819, 77.6006">
+     <meta name="robots" content="index, follow">
+     <meta property="og:title" content="Santhi Multispeciality Hospital - Best Multi-Speciality Hospital in Anantapur">
+     <meta property="og:description" content="Providing expert healthcare services in Anantapur. Contact us at 8554233393. Visit our hospital near RTC Bus Stand, 80 Feet Road.">
+     <meta property="og:type" content="website">
+     <meta property="og:url" content="https://maps.app.goo.gl/bNRKei1RrvCh6dPS7">
+     <meta property="og:site_name" content="Santhi Multispeciality Hospital">
+     <meta name="twitter:title" content="Santhi Multispeciality Hospital - Best Multi-Speciality Hospital in Anantapur">
+     <meta name="twitter:description" content="Providing expert healthcare services in Anantapur. Contact us at 8554233393. Visit our hospital near RTC Bus Stand, 80 Feet Road.">
+     <link rel="canonical" href="https://santhimultispecialityhospital.com/">
+<meta property="og:url" content="https://santhimultispecialityhospital.com/">
+<meta property="og:image" content="https://santhimultispecialityhospital.com/images/favicon.webp">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://santhimultispecialityhospital.com/images/favicon.webp">
+
+
+     <link rel="preload" as="image" href="/images/slider1.webp">
+
+     <link rel="stylesheet" href="/css/bootstrap.min.css">
+     <!-- <link rel="stylesheet" href="/css/font-awesome.min.css"> -->
+     <!-- <link rel="stylesheet" href="/css/animate.css"> -->
+     <!-- <link rel="stylesheet" href="/css/owl.carousel.css"> -->
+     <!-- <link rel="stylesheet" href="/css/owl.theme.default.min.css"> -->
+     <link rel="shortcut icon" href="/images/favicon.webp" type="image/x-icon">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="/css/tooplate-style.css">
+
+     <style>
+          .testimonial-section {
+              background-color: #f8f9fa;
+              padding: 50px 0;
+          }
+          .carousel-inner .item {
+              text-align: center;
+              padding: 20px;
+          }
+          .testimonial-card {
+              background: white;
+              padding: 20px;
+              border-radius: 10px;
+              box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+              display: inline-block;
+              max-width: 600px;
+          }
+          .star-rating {
+              color: #ffc107;
+              font-size: 18px;
+              margin-bottom: 10px;
+          }
+
+          /* arogyasri */
+          #arogyasri-benefits ul {
+               list-style: none;
+               padding-left: 0;
+          }
+          #arogyasri-benefits ul li {
+               padding-left: 1.5em;
+               text-indent: -1.5em;
+               margin-bottom: 10px;
+          }
+          #arogyasri-benefits ul li i {
+               color: #1a76d1; /* Adjust color to match your theme */
+               margin-right: 8px;
+               width: 1.5em; /* Ensure alignment */
+          }
+          #arogyasri-benefits .arogyasri-img {
+               text-align: center; /* Center image on smaller screens if needed */
+               padding-top: 20px; /* Add some space when stacked */
+          }
+          p, li{
+               font-size: 16px !important;
+          }
+          li{
+               margin: 10px;
+          }
+
+          /* navbar shit  */
+          @media (max-width: 391px) {
+               .navbar-brand {
+                    height: 82px !important;
+                    line-height: 1;
+                    padding-top: 2px !important;
+                    /* display: flex;
+                    align-items: center; */
+               }
+          }
+          @media (min-width: 391px) and (max-width: 495px) {
+               .navbar-brand {
+                    height: 55px !important;
+                    display: flex;
+                    align-items: center;
+               }
+          }
+          @media (max-width: 767px){
+               #about{
+                    padding: 50px 50px 0px 0px !important;
+               }
+          }
+/*           
+          #brandboi{
+               margin-top: 10px !important;
+          } */
+
+          .photo-box, .video-box {
+            background: #f5f5f5;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .photo-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .video-box video {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        
+        /* blog cards styling */
+        /* --- BLOG GRID RESPONSIVENESS FIX --- */
+        
+
+      </style>
+      <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "Hospital",
+            "name": "Santi Multi Speciality Hospital",
+            "url": "https://santhimultispecialityhospital.com/",
+            "logo": "https://santhimultispecialityhospital.com/images/favicon.webp",
+            "image": "https://santhimultispecialityhospital.com/images/favicon.webp",
+            "description": "Santi Multi Speciality Hospital is a trusted healthcare provider in Anantapur offering a wide range of medical specialties. Arogyasri benefits available.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "D.No 13-3-380, Near RTC Bus Stand, 80 Feet Road",
+              "addressLocality": "Anantapur",
+              "addressRegion": "Andhra Pradesh",
+              "postalCode": "515001",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 14.687408,
+              "longitude": 77.6016762
+            },
+            "telephone": ["+91-8554233393", "+91-9347605526"],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+91-8554233393",
+              "contactType": "Customer Service",
+              "areaServed": "IN",
+              "availableLanguage": ["English", "Telugu"]
+            },
+            "founder": [
+              {
+                "@type": "Person",
+                "name": "Dr. Vijaya Lakshmi",
+                "jobTitle": "Director",
+                "affiliation": "Santi Multi Speciality Hospital"
+              },
+              {
+                "@type": "Person",
+                "name": "Abhilash",
+                "jobTitle": "Director",
+                "affiliation": "Santi Multi Speciality Hospital"
+              }
+            ],
+            "medicalSpecialty": [
+              "General Surgery",
+              "Orthopedics",
+              "Cardiology",
+              "Gynecology",
+              "Plastic Surgery",
+              "Anesthesiology"
+            ],
+            "hasMap": "https://maps.app.goo.gl/bNRKei1RrvCh6dPS7",
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+              ],
+              "opens": "09:00",
+              "closes": "21:00"
+            },
+            "sameAs": [
+              "https://maps.app.goo.gl/bNRKei1RrvCh6dPS7"
+            ]
+          }
+          </script>
+          
+      
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- PRE LOADER -->
+     <!-- <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section> --> 
+
+
+     <!-- HEADER -->
+     <header>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-5">
+                         <p class="small-hide">Welcome to Santhi Multi Speciality Hospital</p>
+                    </div>
+                         
+                    <div class="col-md-8 col-sm-7 text-align-right">
+                         <span class="phone-icon"><i class="fa fa-phone"></i> 8554233393</span>
+                         <span class="phone-icon"><i class="fa fa-phone"></i> 8328376605</span>
+                         <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 24/7 service</span>
+                         <!-- <span class="email-icon"><i class="fa fa-envelope-o"></i> <a href="/#">info@company.com</a></span> remove email-->
+                    </div>
+
+               </div>
+          </div>
+     </header>
+
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation" style="position:sticky;top: 0;">
+          <div class="container divcon" style="height: max-content;">
+
+               <div class="navbar-header" style="display: flex;align-items: center;">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation">
+<span class="icon icon-bar"></span>
+<span class="icon icon-bar"></span>
+<span class="icon icon-bar"></span>
+</button>
+
+                    <!-- lOGO TEXT HERE -->
+
+                    <a href="/index" class="navbar-brand" style="font-size: 27px; align-self: center;">
+                          Santhi Multispeciality Hospital</a>
+                    <img src="/./images/favicon.webp" alt="Logo" style="height: 50px;display: inline;" id="logo">
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="/index" class="smoothScroll" aria-label="Go to the home page">Home</a></li>
+<li><a href="/about" class="smoothScroll" aria-label="Learn more about us">About Us</a></li>
+<li><a href="/blog" class="smoothScroll" aria-label="Learn more about us">Blog</a></li>
+<li><a href="/doctors" class="smoothScroll" aria-label="Meet our doctors">Doctors</a></li>
+<li><a href="/testimonials" class="smoothScroll" aria-label="Read what our patients say">Testimonials</a></li>
+<li><a href="/appointment" class="smoothScroll" aria-label="Book an appointment">Appointment</a></li>
+                         <!-- <li class="appointment-btn"><a href="/#appointment">Make an appointment</a></li> -->
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+     <section id="blog-posts" class="section-padding" style="padding: 50px 0;">
+         <div class="container" style="max-width: 1140px; margin: 0 auto; padding: 0 15px;">
+             <div class="row" style="display: flex; flex-wrap: wrap; margin-left: -15px; margin-right: -15px;">
+            <div class="col-12 text-center mb-5" style="width: 100%; padding: 0 15px; margin-bottom: 3rem !important; text-align: center;">
+                <h2 class="wow fadeInUp" data-wow-delay="0.3s">Latest Health Insights & News</h2>
+                <p class="wow fadeInUp" data-wow-delay="0.5s">Stay informed with expert articles and hospital updates.</p>
+            </div>
+
+            {% for post in pagination.items %}
+            <div class="col-md-4 col-sm-6 mb-4" style="margin-top:10px;">
+                <div class="card blog-card wow fadeInUp" data-wow-delay="{{ loop.index * 0.2 + 0.5 }}s" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden; height: 100%;">
+                    
+                    <div style="position: relative; padding-top: 56.25%; overflow: hidden;">
+                        <img src="{{ post.data.image }}" loading="lazy" class="card-img-top" alt="{{ post.data.imageAlt }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+                    
+                    <div class="card-body" style="padding: 1rem;">
+                        <h5 class="card-title" style="font-size: 1.25rem; margin-bottom: 0.5rem;"><a href="{{ post.url }}" style="text-decoration: none; color: inherit;">{{ post.data.title }}</a></h5>
+                        
+                        <p class="card-text" style="margin-bottom: 0.5rem;"><small style="color: #6c757d;">Published: <b>{{ post.date | postDate }}</b></small></p>
+                        
+                        <a href="{{ post.url }}" class="btn btn-primary btn-sm mt-2" style="display: inline-block; padding: 0.25rem 0.5rem; font-size: 0.875rem; border-radius: 0.2rem; text-decoration: none; background-color: #007bff; color: white; border: 1px solid #007bff;">Read More</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            </div>
+<br>
+<br>
+<br>
+<br>
+{% set currentPage = pagination.pageNumber + 1 %}
+{% set totalPages = pagination.pages.length %}
+
+<div class="pagination-nav text-center mt-5" style="text-align: center;">
+    <ul style="list-style: none; padding: 0; margin: 0; display: inline-flex;">
+        
+        {# --- 1. Previous Page Link --- #}
+        {% if pagination.href.previous %}
+            <li style="margin: 0 5px;">
+                <a href="{{ pagination.href.previous | url }}" style="padding: 8px 15px; border: 1px solid #ddd; text-decoration: none;">&larr;</a>
+            </li>
+        {% endif %}
+
+        {# --- 2. Numerical Pages Loop (The Working Array Index Fix) --- #}
+        {% for href in pagination.hrefs %} 
+            {% set pageNum = loop.index %} 
+            
+            <li style="margin: 0 5px;">
+                <a 
+                    {# Use the pagination.hrefs array directly for the URL #}
+                    href="{{ href | url }}" 
+                    style="
+                        padding: 8px 15px; 
+                        border: 1px solid #ddd; 
+                        text-decoration: none; 
+                        {% if pageNum == currentPage %}
+                            background-color: #007bff; 
+                            color: white;
+                            border-color: #007bff;
+                        {% else %}
+                            background-color: white; 
+                            color: black;
+                        {% endif %}
+                    "
+                >{{ pageNum }}</a>
+            </li>
+        {% endfor %}
+
+        {# --- 3. Next Page Link --- #}
+        {% if pagination.href.next %}
+            <li style="margin: 0 5px;">
+                <a href="{{ pagination.href.next | url }}" style="padding: 8px 15px; border: 1px solid #ddd; text-decoration: none;">&rarr;</a>
+            </li>
+        {% endif %}
+
+    </ul>
+</div>
+
+        </div>
+</section>
+
+
+
+
+      <!-- Reviews -->
+      <section id="news" class="testimonial-section text-center">
+          <div class="container">
+              <h2 class="mb-4">What Our Patients Say</h2>
+              <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                      <div class="item active">
+                          <div class="testimonial-card">
+                              <div class="star-rating">★★★★★</div>
+                              <p class="lead">"My husband was admited here for 3 days and the experiance was really good. The doctors and nurses take care very well and are very responsble. The hospital is very clean and there was no issue at all. We are very happy with the treatment, and special thanks to Dr. Ramalingha sir for guiding us properly!"</p>
+                              <h4>- Ramesh K.</h4>
+                          </div>
+                      </div>
+                      <div class="item">
+                          <div class="testimonial-card">
+                              <div class="star-rating">★★★★★</div>
+                              <p class="lead">"My mother was sick for many days and we visited many hospitals, but here we got proper treatment and she recovered very fast. The nurses are very kind and always helpful. We are very greatfull to the doctors and the hospital staff. 100% reccomend for any health problems."</p>
+                              <h4>- Arjun M.</h4>
+                          </div>
+                      </div>
+                      <div class="item">
+                          <div class="testimonial-card">
+                              <div class="star-rating">★★★★★</div>
+                              <p class="lead">"Best hospital experiance ever. My daughter had fever and cough for many days, and we visited here. Within 2 days she was perfectly fine. The doctors are very friendly and explain everything nicely. Very good treatment and very good faclities. Thank you to all the staff!"</p>
+                              <h4>- Sita R.</h4>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+     <!-- MAKE AN APPOINTMENT -->
+     <section id="appointment" data-stellar-background-ratio="3">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <img src="/images/appointment-image.webp" class="img-responsive small-hide"  alt="doctor">
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- CONTACT FORM HERE -->
+                         <h2>Book an Appointment</h2>
+                        <iframe data-tally-src="https://tally.so/embed/w4O7ZB?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="276" frameborder="0" marginheight="0" marginwidth="0" title="Contact form"></iframe>
+
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- GOOGLE MAP -->
+     <section id="google-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3859.445020398353!2d77.6016762!3d14.6874077!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb14ad0c991f5d7%3A0x54e460735647ed6c!2sSanthi%20Nursing%20Home!5e0!3m2!1sen!2sin!4v1742896275084!5m2!1sen!2sin" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" title="Location map"></iframe>
+     </section>           
+
+     
+
+     <!-- FOOTER -->
+     <footer data-stellar-background-ratio="5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb"> 
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
+                              <p>Santhi Multi Speciality Hospital<br>D.No 13-3-380, Near RTC Bus Stand,<br>80 Feet Road, Anantapur,<br>Andhra Pradesh 515001</p>  <!-- Added full address -->
+
+                              <div class="contact-info">
+                                   <p><i class="fa fa-phone"></i> 8554233393</p>
+                                   <p><i class="fa fa-phone"></i> 9347605526</p>
+                                   <p><i class="fa fa-phone"></i> 8328376605</p>
+                                   <p><a href="/mailto:santhinursinghome4@gmail.com">santhinursinghome4@gmail.com</a></p>
+                                   <!-- <p><i class="fa fa-envelope-o"></i> <a href="/#">info@company.com</a></p> -->
+                              </div>
+                         </div>
+                    </div>
+
+                    
+
+                    <div class="col-md-4 col-sm-4"> 
+                         <div class="footer-thumb">
+                              <div class="opening-hours">
+                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Opening Hours</h4>
+                                   <p>Monday - Friday <span>24/7 service</span></p>  <!--  Your opening hours  -->
+                                   <p>Saturday <span>24/7 service</span></p>
+                                   <p>Sunday <span>24/7 service</span></p>
+                              </div> 
+
+                              <!-- <ul class="social-icon">
+                                   <li><a href="/#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="/#" class="fa fa-twitter"></a></li>
+                                   <li><a href="/#" class="fa fa-instagram"></a></li>
+                              </ul> -->
+                         </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text"> 
+                                   <p>Copyright © 2025 Santhi Multi Speciality Hospital <!--  Updated copyright  -->
+                                   
+                                   <br> <a rel="nofollow" href="https://webxfearless.pages.dev/" target="_parent">Website developed by WebXFearless</a></p>
+                              </div>
+                         </div>
+                         <div class="col-md-6 col-sm-6">
+                              <div class="footer-link"> 
+                                   <a href="/./terms">Terms, conditions and Privacy Policy</a>
+                              </div>
+                         </div>
+                         <div class="col-md-2 col-sm-2 text-align-center">
+                              <div class="angle-up-btn"> <a href="/#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s" aria-label="Back to top button"><i class="fa fa-angle-up"></i></a>
+                                  
+                              </div>
+                         </div>   
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+     <!-- SCRIPTS -->
+     <!-- <script src="/js/jquery.js"></script> -->
+     <!-- <script src="/js/bootstrap.min.js"></script> -->
+     <!-- <script src="/js/jquery.stellar.min.js"></script> -->
+     <!-- <script src="/js/custom.js"></script> -->
+     <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="/'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+
+     
+    <script>
+               document.addEventListener("DOMContentLoaded", function () {
+                 var toggleBtn = document.querySelector(".navbar-toggle");
+                 var navbarCollapse = document.querySelector(".navbar-collapse");
+               
+                 // Toggle collapse on hamburger button click
+                 toggleBtn.addEventListener("click", function () {
+                   if (navbarCollapse.classList.contains("in")) {
+                     // Hide nav
+                     navbarCollapse.classList.remove("in");
+                     navbarCollapse.style.height = "0px";
+                   } else {
+                     // Show nav
+                     navbarCollapse.classList.add("in");
+                     navbarCollapse.style.height = "auto";
+                   }
+                 });
+               
+                 // Close navbar on link click (for mobile)
+                 var navLinks = document.querySelectorAll(".navbar-collapse a");
+                 navLinks.forEach(function (link) {
+                   link.addEventListener("click", function () {
+                     if (navbarCollapse.classList.contains("in")) {
+                       navbarCollapse.classList.remove("in");
+                       navbarCollapse.style.height = "0px";
+                     }
+                   });
+                 });
+                 const carousel = document.getElementById('testimonialCarousel');
+                        const carouselInner = carousel.querySelector('.carousel-inner');
+                        const items = carouselInner.querySelectorAll('.item');
+                        let activeIndex = 0;
+                
+                        function showItem(index) {
+                            items.forEach((item, i) => {
+                                if (i === index) {
+                                    item.classList.add('active');
+                                } else {
+                                    item.classList.remove('active');
+                                }
+                            });
+                        }
+                
+                        function nextItem() {
+                            activeIndex = (activeIndex + 1) % items.length;
+                            showItem(activeIndex);
+                        }
+                
+                        function prevItem() {
+                            activeIndex = (activeIndex - 1 + items.length) % items.length;
+                            showItem(activeIndex);
+                        }
+                
+                        // Add navigation buttons programmatically
+                        const prevButton = document.createElement('button');
+                        prevButton.innerHTML = '❮';
+                        prevButton.style.position = 'absolute';
+                        prevButton.style.top = '50%';
+                        prevButton.style.transform = 'translateY(-50%)';
+                        prevButton.style.left = '0';
+                    //     prevButton.style.background = 'rgba(0, 0, 0, 0.5)';
+                        prevButton.style.color = 'black';
+                        prevButton.style.border = 'none';
+                        prevButton.style.padding = '10px 15px';
+                        prevButton.style.cursor = 'pointer';
+                        prevButton.style.fontSize = '20px';
+                        prevButton.addEventListener('click', prevItem);
+                
+                        const nextButton = document.createElement('button');
+                        nextButton.innerHTML = '❯';
+                        nextButton.style.position = 'absolute';
+                        nextButton.style.top = '50%';
+                        nextButton.style.transform = 'translateY(-50%)';
+                        nextButton.style.right = '0';
+                    //     nextButton.style.background = 'rgba(0, 0, 0, 0.5)';
+                        nextButton.style.color = 'black';
+                        nextButton.style.border = 'none';
+                        nextButton.style.padding = '10px 15px';
+                        nextButton.style.cursor = 'pointer';
+                        nextButton.style.fontSize = '20px';
+                        nextButton.addEventListener('click', nextItem);
+                
+                        carousel.appendChild(prevButton);
+                        carousel.appendChild(nextButton);
+                
+                        // Initial display
+                        showItem(activeIndex);
+                
+               });</script>
+</body>
+</html>

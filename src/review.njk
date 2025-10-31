@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Form</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+      margin: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .rating {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .rating span {
+      cursor: pointer;
+      font-size: 3rem;
+      color: #ddd;
+      transition: color 0.3s ease, transform 0.2s ease;
+      user-select: none;
+    }
+    .rating span:hover {
+      transform: scale(1.2);
+    }
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+    .submit-btn:hover {
+      background-color: #45a049;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 1.5rem;
+      }
+      .rating span {
+        font-size: 2.5rem;
+      }
+      .submit-btn {
+        font-size: 1rem;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Please Rate Your Experience</h2>
+    <div class="rating">
+      <span id="star1" onclick="selectRating(1)">★</span>
+      <span id="star2" onclick="selectRating(2)">★</span>
+      <span id="star3" onclick="selectRating(3)">★</span>
+      <span id="star4" onclick="selectRating(4)">★</span>
+      <span id="star5" onclick="selectRating(5)">★</span>
+    </div>
+    
+    <button class="submit-btn" id="submitBtn" onclick="handleRedirect()">Give Feedback</button>
+  </div>
+
+  <script>
+    let selectedRating = 0;
+
+    function selectRating(rating) {
+      selectedRating = rating;
+      for (let i = 1; i <= 5; i++) {
+        const star = document.getElementById(`star${i}`);
+        star.style.color = i <= rating ? '#ffcc00' : '#ddd';
+      }
+    }
+
+    function handleRedirect() {
+      if (selectedRating === 0) {
+        alert('Please select a rating.');
+        return;
+      }
+      if (selectedRating >= 4) {
+        window.location.href = 'https://search.google.com/local/writereview?placeid=ChIJ1_WRydBKsTsRbO1HVnNg5FQ';
+      } else {
+        window.location.href = 'https://santhimultispecialityhospital.com/privatefeedback';
+      }
+    }
+  </script>
+
+</body>
+</html>
